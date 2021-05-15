@@ -8,10 +8,12 @@ from helpers.filters import other_filters2
 @Client.on_message(other_filters2)
 async def start(_, message: Message):
       await message.reply_text(
-        f"""**مرحبا انا {bn} 📢
+        f"""**مرحبا انا بوت الاغاني 📢
 
 بامكاني تشغيل الاغاني في مكالمات الكروبات 
-قم برفعي  مشرف في الكروب مع البوت المساعد [اضغط هنا](https://t.me/KKFR7).
+قم برفعي مشرف في الكروب مع البوت المساعد
+
+البـوت المـساعد  @RRBD7
 
 قم باضافتي الى مجموعتك لتشغيل الاغاني**
         """,
@@ -25,7 +27,7 @@ async def start(_, message: Message):
                         " قـناة البوت ", url="https://t.me/Jmthon"
                     ),
                     InlineKeyboardButton(
-                        "الـحساب المساعـد", url="https://t.me/RDRR7"
+                        "الـحساب المساعـد", url="https://t.me/RRBD7"
                     )
                 ],[ 
                     InlineKeyboardButton(
@@ -73,10 +75,10 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        " قنـاة الـمطور", url="https://t.me/Jmthon")
+                        " قنـاة الدعـم", url="https://t.me/Jmthon")
                 ],[
                     InlineKeyboardButton(
-                        " الحساب المساعد", url="https://t.me/KKFR7"
+                        " الحساب المساعد", url="https://t.me/RRBD7"
                     )
                 ]
             ]
