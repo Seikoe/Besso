@@ -73,10 +73,10 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "📌 قنـاة الـمطور", url="https://t.me/Jmthon")
+                        " قنـاة الـمطور", url="https://t.me/Jmthon")
                 ],[
                     InlineKeyboardButton(
-                        "📢 الحساب المساعد", url="https://t.me/KKFR7"
+                        " الحساب المساعد", url="https://t.me/KKFR7"
                     )
                 ]
             ]
