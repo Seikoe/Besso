@@ -11,7 +11,7 @@ async def start(_, message: Message):
         f"""**مرحبا انا {bn} 📢
 
 بامكاني تشغيل الاغاني في مكالمات الكروبات 
-قم برفعي  مشرف في الكروب مع البوت المساعد [Jmthon Bot](https://t.me/KKFR7).
+قم برفعي  مشرف في الكروب مع البوت المساعد [اضغط هنا](https://t.me/KKFR7).
 
 قم باضافتي الى مجموعتك لتشغيل الاغاني**
         """,
@@ -19,13 +19,13 @@ async def start(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "⚠️ المطـور ⚠️", url="https://t.me/RRRD7")
+                        "️ المطـور ️", url="https://t.me/RRRD7")
                   ],[
                     InlineKeyboardButton(
-                        "📌 قـناة البوت 📌", url="https://t.me/Jmthon"
+                        " قـناة البوت ", url="https://t.me/Jmthon"
                     ),
                     InlineKeyboardButton(
-                        "📢 قـناة الـمساعده", url="https://t.me/RDRR7"
+                        "الـحساب المساعـد", url="https://t.me/RDRR7"
                     )
                 ],[ 
                     InlineKeyboardButton(
