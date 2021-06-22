@@ -22,7 +22,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 @errors
 async def play(_, message: Message):
 
-    lel = await message.reply("🔎 **يتم البحث** عن الاغنيه...")
+    lel = await message.reply("**يتم البحث عن الاغنيه انتظر قليلا ❕**")
     sender_id = message.from_user.id
     user_id = message.from_user.id
     sender_name = message.from_user.first_name
@@ -33,7 +33,7 @@ async def play(_, message: Message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    await lel.edit("🎵 **يجري الارسال** للاغنيه...")
+    await lel.edit("** يجري ارسال الاغنية انتظر قليلا 🎵**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -61,7 +61,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="شاهدها على YouTube 🎬",
+                        text="شاهدها على يوتيوب 🎬",
                         url=f"{url}")
                    
                 ]
@@ -72,7 +72,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="شاهدها على YouTube 🎬",
+                        text="شاهدها على يوتيوب 🎬",
                         url=f"{url}")
                    
                 ]
@@ -101,7 +101,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo=thumb_name,
         reply_markup=keyboard,
-        caption="▶️ **جاري التشغيل** هذه هي الأغنية المطلوبة {} عبر YouTube".format(
+        caption="▶️ **جاري التشغيل هذه هي الأغنية المطلوبة {} عبر اليوتيوب** ".format(
         message.from_user.mention()
         ),
     )
