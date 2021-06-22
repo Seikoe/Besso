@@ -1,6 +1,7 @@
 {
   "name": "MUSIC JMTHON",
   "description": "Maker Telegram music bot simple and fast by  - @JMTHON",
+  "logo": "https://telegra.ph/file/6cd59ba38a12ec9595cd9.jpg",
   "keywords": ["music", "voicechat", "telegram"],
   "repository": "https://github.com/JMTHON-AR/JMTHON-MUSIC ",
   "stack": "container",
