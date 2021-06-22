@@ -1,37 +1,37 @@
 {
-  "name": "Music JMTHON ",
-  "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
+  "name": "MUSIC JMTHON",
+  "description": "Maker Telegram music bot simple and fast by  - @JMTHON",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/iqthon/Muisc",
+  "repository": "https://github.com/JMTHON-AR/JMTHON-MUSIC ",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
-      "description": "Pyrogram session string",
+      "description": "كود السيشن مطلوب  - @D7EXBOT",
       "required": true
     },
     "BOT_TOKEN": {
-      "description": "A bot token from @BotFather",
+      "description": "توكن بوت فاذر  - وضع البوت انلاين",
       "required": true
     },
     "BOT_NAME": {
-      "description": "Your MusicPlayer Bot Name.",
+      "description": "اسم البوت الخاص بك",
       "required": false,
-      "value": "MizoInFoTel"
+      "value": "جمثـون"
     },
     "API_ID": {
-      "description": "App ID from my.telegram.org/apps",
+      "description": "الايبي ايدي هنا",
       "required": true
     },
     "API_HASH": {
-      "description": "App hash from my.telegram.org/apps",
+      "description": "الايبي هاش هنا",
       "required": true
     },
     "SUDO_USERS": {
-      "description": "List of user IDs counted as admin everywhere (separated by space). Get from @DingdiBot",
+      "description": "هنا ضع ايدي حسابك",
       "required": true
     },
     "DURATION_LIMIT": {
-      "description": "Max audio duration limit for downloads (minutes).",
+      "description": "عدد التحميلات في الدقيقة الافضل تبقى 10",
       "required": true,
       "value": "10"
     }
