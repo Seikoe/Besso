@@ -23,7 +23,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 100) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"**{bn} :-**⌁  يجب ان يكون حجم مقطع الاغنيه  {DURATION_LIMIT} minute(s) لايمكن تحميل \n المقطع هذا لان حجمه {audio.duration / 100} minute(s)"
+                f"**{bn} :-**  يجب ان يكون حجم مقطع الاغنيه  {DURATION_LIMIT} لايمكن تحميل \n المقطع هذا لان حجمه {audio.duration / 100} "
             )
 
         file_name = get_file_name(audio)
@@ -34,13 +34,13 @@ async def play(_, message: Message):
     elif url:
         file_path = await converter.convert(youtube.download(url))
     else:
-        return await message.reply_text(f"**{bn} :-**⌁ قم بالرد على الاغنيه او الرابط اولا ")
+        return await message.reply_text(f"**{bn} :** قم بالرد على الاغنيه او الرابط اولا ")
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
-        await message.reply_text(f"**{bn} :-** تم اضافه الاغنيه الى الدور #{await callsmusic.queues.put(message.chat.id, file_path=file_path)} ⌁")
+        await message.reply_text(f"**{bn} :** تم اضافه الاغنيه الى الدور #{await callsmusic.queues.put(message.chat.id, file_path=file_path)} ")
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
-        await message.reply_text(f"**{bn} :-**⌁ تـم تشغيل الأغنـية ")
+        await message.reply_text(f"**{bn} :-** تـم تشغيل الأغنـية بنجاح ✅ ")
 @Client.on_message(command("vol"))
 async def volume_bot(_, message):
     usage = "**Usage:**\n/volume [1-200]"
@@ -56,4 +56,4 @@ async def volume_bot(_, message):
     except ValueError:
         await send(usage)
         return
-    await send(f"**تم وضع مستوى صوت البوت ⌁ {volume}**")
+    await send(f"**تم وضع مستوى صوت البوت  {volume}**")
