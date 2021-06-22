@@ -18,7 +18,7 @@ async def a(client, message: Message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = await message.reply(f"**{Bn} :-** 🔍 يتم البحث عن   {query}")
+    m = await message.reply(f"**{Bn} :** يتم البحث عن  {query} انتظر قليلا")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -47,15 +47,15 @@ async def a(client, message: Message):
             open(thumb_name, 'wb').write(thumb.content)
 
         except Exception as e:
-            m.edit(f"**{Bn} :-** ماتبحث عنه غير موجود قم بارسال ررابط صالح.\n\n{e}")
+            m.edit(f"**{Bn} :** ماتبحث عنه غير موجود قم بارسال ررابط صالح.\n\n{e}")
             return
     except Exception as e:
         m.edit(
-           f"**{Bn} :-** عذرا لايوجد ماتبحث عنه.\n\nحاول ارسال ررابط آخر أو ربما كتابته خطأ ."
+           f"**{Bn} :** عذرا لايوجد ماتبحث عنه.\n\nحاول ارسال ررابط آخر أو ربما كتابته خطأ ."
         )
         print(str(e))
         return
-    await m.edit(f"**{Bn} :-** 💞 يتم التحميل...\n** بحثك هو :-** {query}")
+    await m.edit(f"**{Bn} :** 💞 يتم التحميل...\n** بحثك هو :** {query}")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
